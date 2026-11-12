@@ -7,7 +7,7 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
   const AppAppbar({
     super.key,
     this.title,
-    this.centerTitle = false,
+    this.centerTitle = true,
     this.actions,
     this.leading,
     this.leadingWidth = 52,
@@ -38,7 +38,7 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: backgroundColor ?? colors.transparent,
       centerTitle: centerTitle,
       leadingWidth: leadingWidth,
-      titleSpacing: canPop ? 10 : mPadding,
+      titleSpacing: canPop ? sPadding : mPadding,
       title: title,
       actions: actions,
       actionsPadding: const EdgeInsets.only(right: mPadding),

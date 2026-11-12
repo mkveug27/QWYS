@@ -10,7 +10,7 @@ class QWYSAppBarTheme {
     elevation: 0,
     scrolledUnderElevation: 0,
     backgroundColor: LightColors().transparent,
-    titleTextStyle: ThemeTypography.titleSmall.copyWith(
+    titleTextStyle: ThemeTypography.headlineSmall.copyWith(
       overflow: TextOverflow.ellipsis,
       color: LightColors().textIconDefault,
     ),
@@ -19,7 +19,7 @@ class QWYSAppBarTheme {
 
   static AppBarTheme dark = light.copyWith(
     backgroundColor: DarkColors().transparent,
-    titleTextStyle: ThemeTypography.titleSmall.copyWith(
+    titleTextStyle: ThemeTypography.headlineSmall.copyWith(
       overflow: TextOverflow.ellipsis,
       color: DarkColors().textIconDefault,
     ),

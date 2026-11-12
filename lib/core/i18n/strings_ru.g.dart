@@ -41,7 +41,9 @@ class TranslationsRu with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _Translations$action$ru action = _Translations$action$ru._(_root);
 	@override late final _Translations$error$ru error = _Translations$error$ru._(_root);
 	@override late final _Translations$other$ru other = _Translations$other$ru._(_root);
+	@override late final _Translations$screens$ru screens = _Translations$screens$ru._(_root);
 	@override late final _Translations$home$ru home = _Translations$home$ru._(_root);
+	@override late final _Translations$quizzes$ru quizzes = _Translations$quizzes$ru._(_root);
 }
 
 // Path: action
@@ -76,6 +78,16 @@ class _Translations$other$ru implements Translations$other$en {
 	@override String get empty => 'Тут ничего нет';
 }
 
+// Path: screens
+class _Translations$screens$ru implements Translations$screens$en {
+	_Translations$screens$ru._(this._root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get quiz_screen => 'Топ-10 квизов';
+}
+
 // Path: home
 class _Translations$home$ru implements Translations$home$en {
 	_Translations$home$ru._(this._root);
@@ -85,6 +97,17 @@ class _Translations$home$ru implements Translations$home$en {
 	// Translations
 	@override String get title => 'Знания — это игра';
 	@override String get description => 'Десять квизов, множество вопросов и один результат. Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое';
+}
+
+// Path: quizzes
+class _Translations$quizzes$ru implements Translations$quizzes$en {
+	_Translations$quizzes$ru._(this._root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String questions_num({required Object n}) => '${n} вопросов';
+	@override String plays_num({required Object n}) => '${n} прохождений';
 }
 
 /// The flat map containing all translations for locale <ru>.
@@ -100,8 +123,11 @@ extension on TranslationsRu {
 			'action.go_home' => 'На главную',
 			'error.error_default' => 'Ошибка',
 			'other.empty' => 'Тут ничего нет',
+			'screens.quiz_screen' => 'Топ-10 квизов',
 			'home.title' => 'Знания — это игра',
 			'home.description' => 'Десять квизов, множество вопросов и один результат. Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое',
+			'quizzes.questions_num' => ({required Object n}) => '${n} вопросов',
+			'quizzes.plays_num' => ({required Object n}) => '${n} прохождений',
 			_ => null,
 		};
 	}

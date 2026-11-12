@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 abstract class ThemeColors {
+  // Base
   Color get transparent;
-
   Color get white;
   Color get black;
 
@@ -35,105 +35,105 @@ abstract class ThemeColors {
 class LightColors implements ThemeColors {
   const LightColors();
 
+  // Base
   @override
   Color get transparent => Colors.transparent;
-
   @override
   Color get white => const Color(0xFFFFFFFF);
   @override
-  Color get black => const Color(0xFF241F29);
+  Color get black => const Color(0xFF1A1A1A);
 
   // Text & Icon
   @override
-  Color get textIconDefault => const Color(0xFF342D38);
+  Color get textIconDefault => const Color(0xFF2B2B2B);
   @override
-  Color get textIconInverse => const Color(0xFFFFFFFF);
+  Color get textIconInverse => const Color(0xFFFAFAFA);
 
   @override
-  Color get textIconPrimaryDefault => const Color(0xFF986078);
+  Color get textIconPrimaryDefault => const Color(0xFFB84D70);
   @override
-  Color get textIconPrimaryExtra => const Color(0xFF70465A);
+  Color get textIconPrimaryExtra => const Color(0xFF7A2E48);
 
   @override
-  Color get textIconSecondaryDefault => const Color(0xFF79639F);
+  Color get textIconSecondaryDefault => const Color(0xFF7A7A7A);
   @override
-  Color get textIconSecondaryExtra => const Color(0xFF594879);
+  Color get textIconSecondaryExtra => const Color(0xFF4A4A4A);
 
   @override
-  Color get textIconSuccess => const Color(0xFF65774C);
+  Color get textIconSuccess => const Color(0xFF4F7A63);
   @override
-  Color get textIconWarning => const Color(0xFF96713D);
+  Color get textIconWarning => const Color(0xFF8F6A35);
   @override
-  Color get textIconCritical => const Color(0xFFAD526D);
+  Color get textIconCritical => const Color(0xFFA8504F);
 
   // Surface
   @override
-  Color get surfaceDefault => const Color(0xFFFAF7F9);
+  Color get surfaceDefault => const Color(0xFFF3F3F3);
   @override
-  Color get surfaceInverse => const Color(0xFF342D38);
+  Color get surfaceInverse => const Color(0xFF2B2B2B);
 
   @override
-  Color get surfacePrimaryDefault => const Color(0xFFEBC5D2);
+  Color get surfacePrimaryDefault => const Color(0xFFF6D5E0);
   @override
-  Color get surfaceSecondaryDefault => const Color(0xFFD2C5EA);
+  Color get surfaceSecondaryDefault => const Color(0xFFE4E4E4);
 
   @override
-  Color get surfaceSuccess => const Color(0xFFE1E9D5);
+  Color get surfaceSuccess => const Color(0xFFDCE9E0);
   @override
-  Color get surfaceWarning => const Color(0xFFF5E8CD);
+  Color get surfaceWarning => const Color(0xFFF1E6CF);
   @override
-  Color get surfaceCritical => const Color(0xFFF2D9E1);
+  Color get surfaceCritical => const Color(0xFFF0D8D6);
 }
 
 class DarkColors implements ThemeColors {
   const DarkColors();
 
+  // Base
   @override
   Color get transparent => Colors.transparent;
-
   @override
   Color get white => const Color(0xFFFFFFFF);
   @override
-  Color get black => const Color(0xFF000000);
+  Color get black => const Color(0xFF141414);
 
   // Text & Icon
   @override
-  Color get textIconDefault => const Color(0xFFF5EFF7);
+  Color get textIconDefault => const Color(0xFFEDEDED);
   @override
-  Color get textIconInverse => const Color(0xFF342D38);
+  Color get textIconInverse => const Color(0xFF1A1A1A);
 
   @override
-  Color get textIconPrimaryDefault => const Color(0xFFEBC5D2);
+  Color get textIconPrimaryDefault => const Color(0xFFC4A8F0);
   @override
-  Color get textIconPrimaryExtra => const Color(0xFF70465A);
+  Color get textIconPrimaryExtra => const Color(0xFF4A2F7A);
 
   @override
-  Color get textIconSecondaryDefault => const Color(0xFFD2C5EA);
+  Color get textIconSecondaryDefault => const Color(0xFFA8A8A8);
   @override
-  Color get textIconSecondaryExtra => const Color(0xFF594879);
+  Color get textIconSecondaryExtra => const Color(0xFFE0E0E0);
 
   @override
-  Color get textIconSuccess => const Color(0xFFB9D09D);
+  Color get textIconSuccess => const Color(0xFF9CCFB0);
   @override
-  Color get textIconWarning => const Color(0xFFF0CE91);
+  Color get textIconWarning => const Color(0xFFE3C68F);
   @override
-  Color get textIconCritical => const Color(0xFFEDADC2);
+  Color get textIconCritical => const Color(0xFFE0A5A3);
 
   // Surface
   @override
-  Color get surfaceDefault => const Color(0xFF1E1A24);
+  Color get surfaceDefault => const Color(0xFF242424);
   @override
-  Color get surfaceInverse => const Color(0xFFF5EFF7);
+  Color get surfaceInverse => const Color(0xFFEDEDED);
 
   @override
-  Color get surfacePrimaryDefault => const Color(0xFFEBC5D2);
+  Color get surfacePrimaryDefault => const Color(0xFFD8C8F2);
   @override
-  Color get surfaceSecondaryDefault => const Color(0xFFD2C5EA);
+  Color get surfaceSecondaryDefault => const Color(0xFF363636);
 
   @override
-  Color get surfaceSuccess => const Color(0xFF35402F);
+  Color get surfaceSuccess => const Color(0xFF2A3A32);
   @override
-  Color get surfaceWarning => const Color(0xFF463A2B);
+  Color get surfaceWarning => const Color(0xFF3F3626);
   @override
-  Color get surfaceCritical => const Color(0xFF472E39);
+  Color get surfaceCritical => const Color(0xFF402C2C);
 }

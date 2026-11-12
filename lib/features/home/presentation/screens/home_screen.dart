@@ -20,23 +20,25 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(mPadding),
-          child: Column(
-            children: [
-              Expanded(
-                child: Column(
-                  spacing: xlPadding,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _buildIcon(),
-                    _buildDescription(),
-                    _buildButton(),
-                  ],
+        child: FadeAnimation(
+          child: Padding(
+            padding: const EdgeInsets.all(mPadding),
+            child: Column(
+              children: [
+                Expanded(
+                  child: Column(
+                    spacing: xlPadding,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildIcon(),
+                      _buildDescription(),
+                      _buildButton(),
+                    ],
+                  ),
                 ),
-              ),
-              _buildThemeSwitcher(),
-            ],
+                _buildThemeSwitcher(),
+              ],
+            ),
           ),
         ),
       ),
@@ -72,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildButton() {
     return AppButton(
-      onPressed: () => context.push('/error'),
+      onPressed: () => context.push('/quiz'),
       title: Text(t.action.start),
       buttonColor: ButtonColor.inv,
     );

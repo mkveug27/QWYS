@@ -12,3 +12,4 @@ export 'app_progress_indicator.dart';
 export 'app_radio.dart';
 export 'cached_image.dart';
 export 'shimmer_card.dart';
+export 'app_badge.dart';
