@@ -44,7 +44,9 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	late final Translations$action$en action = Translations$action$en._(_root);
 	late final Translations$error$en error = Translations$error$en._(_root);
 	late final Translations$other$en other = Translations$other$en._(_root);
+	late final Translations$screens$en screens = Translations$screens$en._(_root);
 	late final Translations$home$en home = Translations$home$en._(_root);
+	late final Translations$quizzes$en quizzes = Translations$quizzes$en._(_root);
 }
 
 // Path: action
@@ -89,6 +91,18 @@ class Translations$other$en {
 	String get empty => 'Тут ничего нет';
 }
 
+// Path: screens
+class Translations$screens$en {
+	Translations$screens$en._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Топ-10 квизов'
+	String get quiz_screen => 'Топ-10 квизов';
+}
+
 // Path: home
 class Translations$home$en {
 	Translations$home$en._(this._root);
@@ -104,6 +118,21 @@ class Translations$home$en {
 	String get description => 'Десять квизов, множество вопросов и один результат. Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое';
 }
 
+// Path: quizzes
+class Translations$quizzes$en {
+	Translations$quizzes$en._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: '$n вопросов'
+	String questions_num({required Object n}) => '${n} вопросов';
+
+	/// en: '$n прохождений'
+	String plays_num({required Object n}) => '${n} прохождений';
+}
+
 /// The flat map containing all translations for locale <en>.
 /// Only for edge cases! For simple maps, use the map function of this library.
 ///
@@ -117,8 +146,11 @@ extension on Translations {
 			'action.go_home' => 'На главную',
 			'error.error_default' => 'Ошибка',
 			'other.empty' => 'Тут ничего нет',
+			'screens.quiz_screen' => 'Топ-10 квизов',
 			'home.title' => 'Знания — это игра',
 			'home.description' => 'Десять квизов, множество вопросов и один результат. Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое',
+			'quizzes.questions_num' => ({required Object n}) => '${n} вопросов',
+			'quizzes.plays_num' => ({required Object n}) => '${n} прохождений',
 			_ => null,
 		};
 	}

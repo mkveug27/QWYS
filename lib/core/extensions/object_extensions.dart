@@ -3,8 +3,9 @@ import 'package:qwys/core/i18n/strings.g.dart';
 
 extension ObjectUtil on Object {
   String get errorMessage {
-    return this is ServerError
-        ? (this as ServerError).reason
-        : t.error.error_default;
+    if (this is ServerError) {
+      return (this as ServerError).message;
+    }
+    return t.error.error_default;
   }
 }

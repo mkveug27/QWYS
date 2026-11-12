@@ -66,17 +66,17 @@ class _IconButtonSizeConfig {
   factory _IconButtonSizeConfig.from(IconButtonSize size) {
     return switch (size) {
       IconButtonSize.large => const _IconButtonSizeConfig(
-          dimension: 52,
+          dimension: 50,
           radius: 20,
-          iconSize: 20,
+          iconSize: 40,
         ),
       IconButtonSize.medium => const _IconButtonSizeConfig(
           dimension: 40,
-          radius: 12,
-          iconSize: 18,
+          radius: 16,
+          iconSize: 24,
         ),
       IconButtonSize.small => const _IconButtonSizeConfig(
-          dimension: 32,
+          dimension: 30,
           radius: 12,
           iconSize: 16,
         ),

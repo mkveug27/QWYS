@@ -48,10 +48,16 @@ class AppError extends StatelessWidget {
               size: _iconSize,
             ),
             Text(
-              text ?? t.error.error_default,
+              t.error.error_default,
               style: textTheme.headlineMedium,
               textAlign: TextAlign.center,
             ),
+            if (text != null)
+              Text(
+                text!,
+                style: textTheme.bodyLarge,
+                textAlign: TextAlign.center,
+              ),
           ],
         ),
         if (button != null) button!,
