@@ -27,7 +27,7 @@ class AppDivider extends StatelessWidget {
       thickness: thickness,
       indent: indent,
       endIndent: endIndent,
-      color: color ?? colors.textIconDefault,
+      color: color ?? colors.textIconDefault.withValues(alpha: 0.1),
     );
   }
 }
