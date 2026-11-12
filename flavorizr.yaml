@@ -1,0 +1,34 @@
+app:
+  android:
+    flavorDimensions: "QWYSFlavor"
+
+ide: "vscode"
+
+flavors:
+  dev:
+    app:
+      name: "QWYS DEV"
+
+    android:
+      applicationId: "ru.qwys.dev"
+      generateDummyAssets: false
+
+    ios:
+      generateDummyAssets: false
+      bundleId: "ru.qwys.dev"
+
+  prod:
+    app:
+      name: "QWYS"
+
+    android:
+      applicationId: "ru.qwys"
+      generateDummyAssets: false
+
+    ios:
+      bundleId: "ru.qwys"
+      generateDummyAssets: false
+
+flavorizr:
+  overrides:
+    flavors_dart: false
