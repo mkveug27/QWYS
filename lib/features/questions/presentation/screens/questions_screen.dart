@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 
 import 'package:qwys/core/core.dart';
 import 'package:qwys/core/i18n/strings.g.dart';
-import 'package:qwys/di/di.dart';
 import 'package:qwys/features/features.dart';
 
 class QuestionsScreen extends StatefulWidget {

@@ -1,8 +1,10 @@
-export 'common/common.dart';
 export 'constants/constants.dart';
+export 'di/di_config.dart';
 export 'extensions/extensions.dart';
-export 'functions/functions.dart';
+export 'models/models.dart';
+export 'network/network.dart';
 export 'router/router_config.dart';
 export 'services/services.dart';
 export 'theme/theme.dart';
-export 'utilities/utilities.dart';
+export 'utils/utils.dart';
+export 'widgets/widgets.dart';

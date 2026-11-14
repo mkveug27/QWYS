@@ -1,5 +1,5 @@
 import 'package:qwys/core/core.dart';
-import 'package:qwys/flavors.dart';
+import 'package:qwys/app/flavors.dart';
 
 abstract final class DioConfigs {
   static final String baseUrl = F.apiUrl;

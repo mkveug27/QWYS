@@ -98,6 +98,7 @@ class _Translations$home$ru implements Translations$home$en {
 	// Translations
 	@override String get title => 'Знания — это игра';
 	@override String get description => 'Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое';
+	@override String get locale_note => 'Все квизы на английском';
 }
 
 // Path: quizzes
@@ -144,6 +145,7 @@ extension on TranslationsRu {
 			'screens.quiz_screen' => 'Квизы · 10',
 			'home.title' => 'Знания — это игра',
 			'home.description' => 'Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое',
+			'home.locale_note' => 'Все квизы на английском',
 			'quizzes.questions_num' => ({required Object n}) => '${n} вопросов',
 			'quizzes.plays_num' => ({required Object n}) => '${n} прохождений',
 			'questions.answer_hint' => 'Введите ответ на вопрос',

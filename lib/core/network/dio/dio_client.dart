@@ -3,7 +3,7 @@ import 'package:talker_dio_logger/talker_dio_logger_interceptor.dart';
 import 'package:talker_dio_logger/talker_dio_logger_settings.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
-import 'package:qwys/http/data.dart';
+import 'package:qwys/core/network/network.dart';
 
 class DioClient {
   DioClient({required this.dio, required this.talker}) {

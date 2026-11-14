@@ -24,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Padding(
             padding: const EdgeInsets.all(mPadding),
             child: Column(
+              spacing: sPadding,
               children: [
                 Expanded(
                   child: Column(
@@ -36,7 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                _buildThemeSwitcher(),
+                _buildSwitchers(),
+                _buildVersion(),
               ],
             ),
           ),
@@ -73,10 +75,35 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildButton() {
-    return AppButton(
-      onPressed: () => context.push('/quizzes'),
-      title: Text(t.action.start),
-      buttonColor: ButtonColor.inv,
+    final textTheme = Theme.of(context).textTheme;
+    final colors = Theme.of(context).colors;
+
+    return Column(
+      spacing: sPadding,
+      children: [
+        AppButton(
+          onPressed: () => context.push('/quizzes'),
+          title: Text(t.action.start),
+          buttonColor: ButtonColor.inv,
+        ),
+        Text(
+          t.home.locale_note,
+          style: textTheme.labelSmall?.copyWith(
+            color: colors.textIconSecondaryDefault,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildSwitchers() {
+    return Column(
+      spacing: sPadding,
+      children: [
+        _buildThemeSwitcher(),
+        _buildLocaleSwitcher(),
+      ],
     );
   }
 
@@ -92,4 +119,17 @@ class _HomeScreenState extends State<HomeScreen> {
       },
     );
   }
+
+  Widget _buildLocaleSwitcher() {
+    return BlocBuilder<LocaleCubit, AppLocale>(
+      builder: (context, locale) {
+        return LocaleSwitcher(
+          selectedLocale: locale,
+          onChanged: context.read<LocaleCubit>().setLocale,
+        );
+      },
+    );
+  }
+
+  Widget _buildVersion() => AppVersion();
 }

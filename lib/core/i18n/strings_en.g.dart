@@ -58,14 +58,14 @@ class Translations$action$en {
 
 	// Translations
 
-	/// en: 'Начать'
-	String get start => 'Начать';
+	/// en: 'Start'
+	String get start => 'Start';
 
-	/// en: 'Обновить'
-	String get refresh => 'Обновить';
+	/// en: 'Refresh'
+	String get refresh => 'Refresh';
 
-	/// en: 'На главную'
-	String get go_home => 'На главную';
+	/// en: 'Home'
+	String get go_home => 'Home';
 }
 
 // Path: error
@@ -76,8 +76,8 @@ class Translations$error$en {
 
 	// Translations
 
-	/// en: 'Ошибка'
-	String get error_default => 'Ошибка';
+	/// en: 'Error'
+	String get error_default => 'Error';
 }
 
 // Path: other
@@ -88,8 +88,8 @@ class Translations$other$en {
 
 	// Translations
 
-	/// en: 'Тут ничего нет'
-	String get empty => 'Тут ничего нет';
+	/// en: 'There's nothing here'
+	String get empty => 'There\'s nothing here';
 }
 
 // Path: screens
@@ -100,8 +100,8 @@ class Translations$screens$en {
 
 	// Translations
 
-	/// en: 'Квизы · 10'
-	String get quiz_screen => 'Квизы · 10';
+	/// en: 'Quizzes · 10'
+	String get quiz_screen => 'Quizzes · 10';
 }
 
 // Path: home
@@ -112,11 +112,14 @@ class Translations$home$en {
 
 	// Translations
 
-	/// en: 'Знания — это игра'
-	String get title => 'Знания — это игра';
+	/// en: 'Knowledge Is a Game'
+	String get title => 'Knowledge Is a Game';
 
-	/// en: 'Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое'
-	String get description => 'Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое';
+	/// en: 'Explore different categories, test your knowledge, and discover something new'
+	String get description => 'Explore different categories, test your knowledge, and discover something new';
+
+	/// en: 'All quizzes are in English'
+	String get locale_note => 'All quizzes are in English';
 }
 
 // Path: quizzes
@@ -127,11 +130,11 @@ class Translations$quizzes$en {
 
 	// Translations
 
-	/// en: '$n вопросов'
-	String questions_num({required Object n}) => '${n} вопросов';
+	/// en: '$n questions'
+	String questions_num({required Object n}) => '${n} questions';
 
-	/// en: '$n прохождений'
-	String plays_num({required Object n}) => '${n} прохождений';
+	/// en: '$n plays'
+	String plays_num({required Object n}) => '${n} plays';
 }
 
 // Path: questions
@@ -142,29 +145,29 @@ class Translations$questions$en {
 
 	// Translations
 
-	/// en: 'Введите ответ на вопрос'
-	String get answer_hint => 'Введите ответ на вопрос';
+	/// en: 'Enter your answer'
+	String get answer_hint => 'Enter your answer';
 
-	/// en: 'Проверить результат'
-	String get check_answers => 'Проверить результат';
+	/// en: 'Check your results'
+	String get check_answers => 'Check your results';
 
-	/// en: 'Результат'
-	String get result_title => 'Результат';
+	/// en: 'Result'
+	String get result_title => 'Result';
 
-	/// en: 'Правильных ответов: $correctCount из $questionsNum'
-	String correct_answers_count({required Object correctCount, required Object questionsNum}) => 'Правильных ответов: ${correctCount} из ${questionsNum}';
+	/// en: 'Correct answers: $correctCount out of $questionsNum'
+	String correct_answers_count({required Object correctCount, required Object questionsNum}) => 'Correct answers: ${correctCount} out of ${questionsNum}';
 
-	/// en: 'Посмотреть ответы'
-	String get show_correct_answers => 'Посмотреть ответы';
+	/// en: 'View answers'
+	String get show_correct_answers => 'View answers';
 
-	/// en: 'Правильный ответ'
-	String get correct_answer => 'Правильный ответ';
+	/// en: 'Correct answer'
+	String get correct_answer => 'Correct answer';
 
-	/// en: 'Пояснение'
-	String get explanation => 'Пояснение';
+	/// en: 'Explanation'
+	String get explanation => 'Explanation';
 
-	/// en: 'Часть вопросов не проверяется автоматически'
-	String get auto_check_note => 'Часть вопросов не проверяется автоматически';
+	/// en: 'Some questions are not checked automatically'
+	String get auto_check_note => 'Some questions are not checked automatically';
 }
 
 /// The flat map containing all translations for locale <en>.
@@ -175,24 +178,25 @@ class Translations$questions$en {
 extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'action.start' => 'Начать',
-			'action.refresh' => 'Обновить',
-			'action.go_home' => 'На главную',
-			'error.error_default' => 'Ошибка',
-			'other.empty' => 'Тут ничего нет',
-			'screens.quiz_screen' => 'Квизы · 10',
-			'home.title' => 'Знания — это игра',
-			'home.description' => 'Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое',
-			'quizzes.questions_num' => ({required Object n}) => '${n} вопросов',
-			'quizzes.plays_num' => ({required Object n}) => '${n} прохождений',
-			'questions.answer_hint' => 'Введите ответ на вопрос',
-			'questions.check_answers' => 'Проверить результат',
-			'questions.result_title' => 'Результат',
-			'questions.correct_answers_count' => ({required Object correctCount, required Object questionsNum}) => 'Правильных ответов: ${correctCount} из ${questionsNum}',
-			'questions.show_correct_answers' => 'Посмотреть ответы',
-			'questions.correct_answer' => 'Правильный ответ',
-			'questions.explanation' => 'Пояснение',
-			'questions.auto_check_note' => 'Часть вопросов не проверяется автоматически',
+			'action.start' => 'Start',
+			'action.refresh' => 'Refresh',
+			'action.go_home' => 'Home',
+			'error.error_default' => 'Error',
+			'other.empty' => 'There\'s nothing here',
+			'screens.quiz_screen' => 'Quizzes · 10',
+			'home.title' => 'Knowledge Is a Game',
+			'home.description' => 'Explore different categories, test your knowledge, and discover something new',
+			'home.locale_note' => 'All quizzes are in English',
+			'quizzes.questions_num' => ({required Object n}) => '${n} questions',
+			'quizzes.plays_num' => ({required Object n}) => '${n} plays',
+			'questions.answer_hint' => 'Enter your answer',
+			'questions.check_answers' => 'Check your results',
+			'questions.result_title' => 'Result',
+			'questions.correct_answers_count' => ({required Object correctCount, required Object questionsNum}) => 'Correct answers: ${correctCount} out of ${questionsNum}',
+			'questions.show_correct_answers' => 'View answers',
+			'questions.correct_answer' => 'Correct answer',
+			'questions.explanation' => 'Explanation',
+			'questions.auto_check_note' => 'Some questions are not checked automatically',
 			_ => null,
 		};
 	}

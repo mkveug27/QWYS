@@ -15,7 +15,8 @@
   },
   "home": {
     "title": "Knowledge Is a Game",
-    "description": "Explore different categories, test your knowledge, and discover something new"
+    "description": "Explore different categories, test your knowledge, and discover something new",
+    "locale_note": "All quizzes are in English"
   },
   "quizzes": {
     "questions_num": "$n questions",

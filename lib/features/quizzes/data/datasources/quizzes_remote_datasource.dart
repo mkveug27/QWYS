@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:qwys/http/data.dart';
+import 'package:qwys/core/network/network.dart';
 
 class QuizzesRemoteDatasource {
   QuizzesRemoteDatasource({required this.dioClient});

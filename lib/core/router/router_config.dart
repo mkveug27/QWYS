@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
 import 'package:qwys/core/core.dart';
-import 'package:qwys/di/di.dart';
 import 'package:qwys/features/features.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>(

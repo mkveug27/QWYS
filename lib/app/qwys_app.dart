@@ -5,7 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:qwys/core/core.dart';
 import 'package:qwys/core/i18n/strings.g.dart';
 import 'package:qwys/features/features.dart';
-import 'package:qwys/flavors.dart';
+import 'package:qwys/app/flavors.dart';
 
 class QWYSApp extends StatelessWidget {
   const QWYSApp({super.key});

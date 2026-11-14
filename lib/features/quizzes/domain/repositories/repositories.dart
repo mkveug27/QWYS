@@ -1,1 +1,1 @@
-export 'quizzes_repository.dart';
+export 'quizzes_repository_interface.dart';

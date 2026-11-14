@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
-import 'package:qwys/http/data.dart';
+import 'package:qwys/core/network/network.dart';
 import 'package:qwys/features/features.dart';
 
 final getIt = GetIt.instance;

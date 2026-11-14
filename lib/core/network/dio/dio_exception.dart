@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:qwys/core/common/common.dart';
+import 'package:qwys/core/core.dart';
 
 class DioExceptions implements Exception {
   const DioExceptions._(this.serverError);

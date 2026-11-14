@@ -1,4 +1,4 @@
-import 'flavors.dart';
+import 'package:qwys/app/app.dart';
 
 import 'main.dart' as runner;
 
