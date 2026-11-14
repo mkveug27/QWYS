@@ -1,0 +1,34 @@
+{
+  "action": {
+    "start": "Начать",
+    "refresh": "Обновить",
+    "go_home": "На главную"
+  },
+  "error": {
+    "error_default": "Ошибка"
+  },
+  "other": {
+    "empty": "Тут ничего нет"
+  },
+  "screens": {
+    "quiz_screen": "Квизы · 10"
+  },
+  "home": {
+    "title": "Знания — это игра",
+    "description": "Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое"
+  },
+  "quizzes": {
+    "questions_num": "$n вопросов",
+    "plays_num": "$n прохождений"
+  },
+  "questions": {
+    "answer_hint": "Введите ответ на вопрос",
+    "check_answers": "Проверить результат",
+    "result_title": "Результат",
+    "correct_answers_count": "Правильных ответов: $correctCount из $questionsNum",
+    "show_correct_answers": "Посмотреть ответы",
+    "correct_answer": "Правильный ответ",
+    "explanation": "Пояснение",
+    "auto_check_note": "Часть вопросов не проверяется автоматически"
+  }
+}

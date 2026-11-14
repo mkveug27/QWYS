@@ -15,12 +15,8 @@ class _ErrorScreenState extends State<ErrorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AppError(
-        button: AppButton(
-          title: Text(t.action.go_home),
-          onPressed: () => context.go('/home'),
-          buttonColor: ButtonColor.inv,
-          fullWidth: false,
-        ),
+        onPressed: () => context.go('/home'),
+        buttonText: t.action.go_home,
       ),
     );
   }

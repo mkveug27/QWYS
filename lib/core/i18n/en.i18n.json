@@ -1,0 +1,34 @@
+{
+  "action": {
+    "start": "Start",
+    "refresh": "Refresh",
+    "go_home": "Home"
+  },
+  "error": {
+    "error_default": "Error"
+  },
+  "other": {
+    "empty": "There's nothing here"
+  },
+  "screens": {
+    "quiz_screen": "Quizzes · 10"
+  },
+  "home": {
+    "title": "Knowledge Is a Game",
+    "description": "Explore different categories, test your knowledge, and discover something new"
+  },
+  "quizzes": {
+    "questions_num": "$n questions",
+    "plays_num": "$n plays"
+  },
+  "questions": {
+    "answer_hint": "Enter your answer",
+    "check_answers": "Check your results",
+    "result_title": "Result",
+    "correct_answers_count": "Correct answers: $correctCount out of $questionsNum",
+    "show_correct_answers": "View answers",
+    "correct_answer": "Correct answer",
+    "explanation": "Explanation",
+    "auto_check_note": "Some questions are not checked automatically"
+  }
+}

@@ -4,7 +4,7 @@ import 'package:qwys/core/core.dart';
 class AppTheme {
   AppTheme._();
 
-  static final ThemeData lightTheme = _buildTheme(
+  static ThemeData lightTheme = _buildTheme(
     colors: LightColors(),
     brightness: Brightness.light,
     appBarTheme: QWYSAppBarTheme.light,
@@ -14,7 +14,7 @@ class AppTheme {
     progressIndicatorTheme: QWYSProgressIndicatorTheme.light,
   );
 
-  static final ThemeData darkTheme = _buildTheme(
+  static ThemeData darkTheme = _buildTheme(
     colors: DarkColors(),
     brightness: Brightness.dark,
     appBarTheme: QWYSAppBarTheme.dark,
@@ -73,7 +73,7 @@ class AppTheme {
       splashColor: colors.textIconDefault.withValues(alpha: 0.04),
 
       // Typography
-      fontFamily: 'OpenSans',
+      fontFamily: 'Cormorant',
       textTheme: textTheme,
 
       // Components

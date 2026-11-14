@@ -24,8 +24,9 @@ class AppIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colors;
+
     final size = _IconButtonSizeConfig.from(buttonSize);
-    final color = _IconButtonColorConfig.from(colors, buttonColor);
+    final color = _IconButtonColorConfig.from(context, buttonColor);
 
     return SizedBox.square(
       dimension: size.dimension,
@@ -94,9 +95,11 @@ class _IconButtonColorConfig {
   final Color foreground;
 
   factory _IconButtonColorConfig.from(
-    ThemeColors colors,
+    BuildContext context,
     IconButtonColor color,
   ) {
+    final colors = Theme.of(context).colors;
+
     return switch (color) {
       IconButtonColor.def => _IconButtonColorConfig(
           background: colors.surfaceDefault,

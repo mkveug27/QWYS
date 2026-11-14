@@ -29,6 +29,7 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colors;
+
     final canPop = ModalRoute.of(context)?.canPop ?? false;
 
     return AppBar(
@@ -60,7 +61,7 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: AppIconButton(
-        icon: Icons.arrow_left,
+        icon: ThemeIcons.chevronLeftLarge,
         buttonSize: IconButtonSize.medium,
         buttonColor: IconButtonColor.def,
         onTap: () => _handleBack(context, canPop),

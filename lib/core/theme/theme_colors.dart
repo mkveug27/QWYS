@@ -25,7 +25,10 @@ abstract class ThemeColors {
   Color get surfaceInverse;
 
   Color get surfacePrimaryDefault;
+  Color get surfacePrimaryExtra;
+
   Color get surfaceSecondaryDefault;
+  Color get surfaceSecondaryExtra;
 
   Color get surfaceSuccess;
   Color get surfaceWarning;
@@ -75,7 +78,12 @@ class LightColors implements ThemeColors {
   @override
   Color get surfacePrimaryDefault => const Color(0xFFF6D5E0);
   @override
+  Color get surfacePrimaryExtra => const Color(0xFF7A2E48);
+
+  @override
   Color get surfaceSecondaryDefault => const Color(0xFFE4E4E4);
+  @override
+  Color get surfaceSecondaryExtra => const Color(0xFF4A4A4A);
 
   @override
   Color get surfaceSuccess => const Color(0xFFDCE9E0);
@@ -128,7 +136,12 @@ class DarkColors implements ThemeColors {
   @override
   Color get surfacePrimaryDefault => const Color(0xFFD8C8F2);
   @override
+  Color get surfacePrimaryExtra => const Color(0xFF4A2F7A);
+
+  @override
   Color get surfaceSecondaryDefault => const Color(0xFF363636);
+  @override
+  Color get surfaceSecondaryExtra => const Color(0xFFE0E0E0);
 
   @override
   Color get surfaceSuccess => const Color(0xFF2A3A32);

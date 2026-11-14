@@ -4,13 +4,13 @@ import 'package:qwys/core/core.dart';
 class QWYSInputDecorationTheme {
   QWYSInputDecorationTheme._();
 
-  static final InputDecorationTheme light = _build(
+  static InputDecorationTheme light = _build(
     colors: LightColors(),
     textTheme: QWYSTextTheme.light,
     fillColor: LightColors().surfaceSecondaryDefault,
   );
 
-  static final InputDecorationTheme dark = _build(
+  static InputDecorationTheme dark = _build(
     colors: DarkColors(),
     textTheme: QWYSTextTheme.dark,
     fillColor: DarkColors().surfaceSecondaryDefault,

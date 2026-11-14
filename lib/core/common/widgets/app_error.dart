@@ -6,16 +6,18 @@ import 'package:qwys/core/i18n/strings.g.dart';
 class AppError extends StatelessWidget {
   const AppError({
     super.key,
-    this.icon = Icons.error_outline_outlined,
+    this.icon,
     this.text,
-    this.button,
+    this.onPressed,
+    this.buttonText,
     this.isScrollable = true,
     this.padding,
   });
 
-  final IconData icon;
+  final IconData? icon;
   final String? text;
-  final Widget? button;
+  final VoidCallback? onPressed;
+  final String? buttonText;
   final bool isScrollable;
   final EdgeInsets? padding;
 
@@ -44,7 +46,7 @@ class AppError extends StatelessWidget {
           spacing: sPadding,
           children: [
             Icon(
-              icon,
+              icon ?? ThemeIcons.circleWarning,
               size: _iconSize,
             ),
             Text(
@@ -60,7 +62,13 @@ class AppError extends StatelessWidget {
               ),
           ],
         ),
-        if (button != null) button!,
+        if (onPressed != null && buttonText != null)
+          AppButton(
+            onPressed: onPressed!,
+            title: Text(buttonText!),
+            buttonColor: ButtonColor.inv,
+            fullWidth: false,
+          ),
       ],
     );
   }

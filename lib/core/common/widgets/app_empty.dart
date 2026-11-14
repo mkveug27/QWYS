@@ -6,16 +6,18 @@ import 'package:qwys/core/i18n/strings.g.dart';
 class AppEmpty extends StatelessWidget {
   const AppEmpty({
     super.key,
-    this.icon = Icons.inbox_outlined,
+    this.icon,
     this.text,
-    this.button,
+    this.onPressed,
+    this.buttonText,
     this.isScrollable = true,
     this.padding,
   });
 
-  final IconData icon;
+  final IconData? icon;
   final String? text;
-  final Widget? button;
+  final VoidCallback? onPressed;
+  final String? buttonText;
   final bool isScrollable;
   final EdgeInsets? padding;
 
@@ -25,9 +27,19 @@ class AppEmpty extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: isScrollable
-          ? SingleChildScrollView(
-              padding: padding ?? EdgeInsets.all(mPadding),
-              child: _buildContent(context),
+          ? CustomScrollView(
+              physics: const AlwaysScrollableScrollPhysics(),
+              slivers: [
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Padding(
+                    padding: padding ?? EdgeInsets.all(mPadding),
+                    child: Center(
+                      child: _buildContent(context),
+                    ),
+                  ),
+                ),
+              ],
             )
           : _buildContent(context),
     );
@@ -44,7 +56,7 @@ class AppEmpty extends StatelessWidget {
           spacing: sPadding,
           children: [
             Icon(
-              icon,
+              icon ?? ThemeIcons.squareDashedMinus,
               size: _iconSize,
             ),
             Text(
@@ -54,7 +66,13 @@ class AppEmpty extends StatelessWidget {
             ),
           ],
         ),
-        if (button != null) button!,
+        if (onPressed != null && buttonText != null)
+          AppButton(
+            onPressed: onPressed!,
+            title: Text(buttonText!),
+            buttonColor: ButtonColor.inv,
+            fullWidth: false,
+          ),
       ],
     );
   }

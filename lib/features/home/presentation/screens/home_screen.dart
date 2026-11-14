@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildIcon() {
     return Icon(
-      Icons.quiz_outlined,
+      ThemeIcons.puzzle,
       size: _iconSize,
     );
   }
@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildButton() {
     return AppButton(
-      onPressed: () => context.push('/quiz'),
+      onPressed: () => context.push('/quizzes'),
       title: Text(t.action.start),
       buttonColor: ButtonColor.inv,
     );

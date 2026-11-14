@@ -21,18 +21,14 @@ class AppModal extends StatelessWidget {
   Widget build(BuildContext context) {
     final content = _buildContent(context);
 
-    return useSafeArea
-        ? SafeArea(
-            bottom: false,
-            child: content,
-          )
-        : content;
+    return useSafeArea ? SafeArea(bottom: false, child: content) : content;
   }
 
   Widget _buildContent(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    return Padding(
+    return Container(
+      width: double.infinity,
       padding: EdgeInsets.only(
         bottom: MediaQuery.of(context).padding.bottom + mPadding,
       ),

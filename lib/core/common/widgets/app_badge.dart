@@ -33,11 +33,8 @@ class AppBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colors;
-    final textTheme = Theme.of(context).textTheme;
-
-    final size = _BadgeSizeConfig.from(badgeSize, textTheme);
-    final color = _BadgeColorConfig.from(colors, badgeColor);
+    final size = _BadgeSizeConfig.from(context, badgeSize);
+    final color = _BadgeColorConfig.from(context, badgeColor);
 
     return Container(
       padding: size.padding,
@@ -95,9 +92,11 @@ class _BadgeSizeConfig {
   final TextStyle textStyle;
 
   factory _BadgeSizeConfig.from(
+    BuildContext context,
     BadgeSize size,
-    TextTheme textTheme,
   ) {
+    final textTheme = Theme.of(context).textTheme;
+
     return switch (size) {
       BadgeSize.large => _BadgeSizeConfig(
           padding: const EdgeInsets.symmetric(
@@ -140,9 +139,11 @@ class _BadgeColorConfig {
   final Color foreground;
 
   factory _BadgeColorConfig.from(
-    ThemeColors colors,
+    BuildContext context,
     BadgeColor color,
   ) {
+    final colors = Theme.of(context).colors;
+
     return switch (color) {
       BadgeColor.def => _BadgeColorConfig(
           background: colors.surfaceDefault,

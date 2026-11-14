@@ -44,6 +44,7 @@ class TranslationsRu with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _Translations$screens$ru screens = _Translations$screens$ru._(_root);
 	@override late final _Translations$home$ru home = _Translations$home$ru._(_root);
 	@override late final _Translations$quizzes$ru quizzes = _Translations$quizzes$ru._(_root);
+	@override late final _Translations$questions$ru questions = _Translations$questions$ru._(_root);
 }
 
 // Path: action
@@ -85,7 +86,7 @@ class _Translations$screens$ru implements Translations$screens$en {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get quiz_screen => 'Топ-10 квизов';
+	@override String get quiz_screen => 'Квизы · 10';
 }
 
 // Path: home
@@ -96,7 +97,7 @@ class _Translations$home$ru implements Translations$home$en {
 
 	// Translations
 	@override String get title => 'Знания — это игра';
-	@override String get description => 'Десять квизов, множество вопросов и один результат. Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое';
+	@override String get description => 'Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое';
 }
 
 // Path: quizzes
@@ -108,6 +109,23 @@ class _Translations$quizzes$ru implements Translations$quizzes$en {
 	// Translations
 	@override String questions_num({required Object n}) => '${n} вопросов';
 	@override String plays_num({required Object n}) => '${n} прохождений';
+}
+
+// Path: questions
+class _Translations$questions$ru implements Translations$questions$en {
+	_Translations$questions$ru._(this._root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get answer_hint => 'Введите ответ на вопрос';
+	@override String get check_answers => 'Проверить результат';
+	@override String get result_title => 'Результат';
+	@override String correct_answers_count({required Object correctCount, required Object questionsNum}) => 'Правильных ответов: ${correctCount} из ${questionsNum}';
+	@override String get show_correct_answers => 'Посмотреть ответы';
+	@override String get correct_answer => 'Правильный ответ';
+	@override String get explanation => 'Пояснение';
+	@override String get auto_check_note => 'Часть вопросов не проверяется автоматически';
 }
 
 /// The flat map containing all translations for locale <ru>.
@@ -123,11 +141,19 @@ extension on TranslationsRu {
 			'action.go_home' => 'На главную',
 			'error.error_default' => 'Ошибка',
 			'other.empty' => 'Тут ничего нет',
-			'screens.quiz_screen' => 'Топ-10 квизов',
+			'screens.quiz_screen' => 'Квизы · 10',
 			'home.title' => 'Знания — это игра',
-			'home.description' => 'Десять квизов, множество вопросов и один результат. Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое',
+			'home.description' => 'Исследуй разные категории, проверяй свои знания и открывай для себя что-то новое',
 			'quizzes.questions_num' => ({required Object n}) => '${n} вопросов',
 			'quizzes.plays_num' => ({required Object n}) => '${n} прохождений',
+			'questions.answer_hint' => 'Введите ответ на вопрос',
+			'questions.check_answers' => 'Проверить результат',
+			'questions.result_title' => 'Результат',
+			'questions.correct_answers_count' => ({required Object correctCount, required Object questionsNum}) => 'Правильных ответов: ${correctCount} из ${questionsNum}',
+			'questions.show_correct_answers' => 'Посмотреть ответы',
+			'questions.correct_answer' => 'Правильный ответ',
+			'questions.explanation' => 'Пояснение',
+			'questions.auto_check_note' => 'Часть вопросов не проверяется автоматически',
 			_ => null,
 		};
 	}

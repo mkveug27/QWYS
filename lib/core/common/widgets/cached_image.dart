@@ -121,7 +121,7 @@ class CachedImage extends StatelessWidget {
   Widget _buildDefaultErrorWidget() {
     return Center(
       child: Icon(
-        Icons.error_outline,
+        ThemeIcons.circleWarning,
         size: errorIconSize,
       ),
     );

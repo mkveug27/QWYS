@@ -26,11 +26,23 @@ final router = GoRouter(
       ),
     ),
     GoRoute(
-      path: '/quiz',
+      path: '/quizzes',
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
-        child: const QuizScreen(),
+        child: const QuizzesScreen(),
       ),
+      routes: [
+        GoRoute(
+          path: ':id',
+          pageBuilder: (context, state) => NoTransitionPage<void>(
+            key: state.pageKey,
+            child: QuestionsScreen(
+              quizId: state.pathParameters['id']!,
+              quizTitle: state.uri.queryParameters['quizTitle']!,
+            ),
+          ),
+        ),
+      ],
     ),
   ],
 );

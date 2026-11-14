@@ -1,5 +1,5 @@
 name: qwys
-description: "use your fucking brain"
+description: "Quiz application"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -16,7 +16,6 @@ dependencies:
   bloc: ^9.2.1
   bloc_concurrency: ^0.3.0
   cached_network_image: ^3.4.1
-  connectivity_plus: ^7.0.0
   cupertino_icons: ^1.0.9
   dio: ^5.10.0
   equatable: ^2.1.0
@@ -61,18 +60,19 @@ flutter:
     - assets/
     - assets/app/
 
-  # fonts:
-  #   - family: Onest
-  #     fonts:
-  #       - asset: assets/fonts/onest/Onest-Black.ttf
-  #       - asset: assets/fonts/onest/Onest-Bold.ttf
-  #       - asset: assets/fonts/onest/Onest-ExtraBold.ttf
-  #       - asset: assets/fonts/onest/Onest-ExtraLight.ttf
-  #       - asset: assets/fonts/onest/Onest-Light.ttf
-  #       - asset: assets/fonts/onest/Onest-Medium.ttf
-  #       - asset: assets/fonts/onest/Onest-Regular.ttf
-  #       - asset: assets/fonts/onest/Onest-SemiBold.ttf
-  #       - asset: assets/fonts/onest/Onest-Thin.ttf
-  #   - family: UrbanLegends
-  #     fonts:
-  #       - asset: assets/fonts/urban_legends/UrbanLegends.ttf
+  fonts:
+    - family: Cormorant
+      fonts:
+        - asset: assets/fonts/Cormorant/Cormorant-Bold.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-BoldItalic.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-Italic.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-Light.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-LightItalic.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-Medium.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-MediumItalic.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-Regular.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-SemiBold.ttf
+        - asset: assets/fonts/Cormorant/Cormorant-SemiBoldItalic.ttf
+    - family: qwys
+      fonts:
+        - asset: assets/fonts/qwys/qwys.ttf

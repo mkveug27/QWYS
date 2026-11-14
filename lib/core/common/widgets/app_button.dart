@@ -32,10 +32,9 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colors;
-    final textTheme = Theme.of(context).textTheme;
 
-    final size = _ButtonSizeConfig.from(buttonSize, textTheme);
-    final color = _ButtonColorConfig.from(colors, buttonColor);
+    final size = _ButtonSizeConfig.from(context, buttonSize);
+    final color = _ButtonColorConfig.from(context, buttonColor);
 
     final isDisabled = disabled || loading;
 
@@ -101,9 +100,11 @@ class _ButtonSizeConfig {
   final TextStyle textStyle;
 
   factory _ButtonSizeConfig.from(
+    BuildContext context,
     ButtonSize size,
-    TextTheme textTheme,
   ) {
+    final textTheme = Theme.of(context).textTheme;
+
     return switch (size) {
       ButtonSize.large => _ButtonSizeConfig(
           height: 52,
@@ -137,9 +138,11 @@ class _ButtonColorConfig {
   final Color foreground;
 
   factory _ButtonColorConfig.from(
-    ThemeColors colors,
+    BuildContext context,
     ButtonColor color,
   ) {
+    final colors = Theme.of(context).colors;
+
     return switch (color) {
       ButtonColor.def => _ButtonColorConfig(
           background: colors.surfaceDefault,

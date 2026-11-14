@@ -50,8 +50,8 @@ class AppRadio<T> extends StatelessWidget {
     final colors = Theme.of(context).colors;
 
     return AnimatedContainer(
-      width: _size,
-      height: _size,
+      width: _getSize(size),
+      height: _getSize(size),
       duration: Duration(milliseconds: 300),
       curve: Curves.fastOutSlowIn,
       margin: const EdgeInsets.all(xsPadding),
@@ -59,9 +59,8 @@ class AppRadio<T> extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
           width: _borderWidth,
-          color: isSelected
-              ? colors.surfacePrimaryDefault
-              : colors.textIconDefault,
+          color:
+              isSelected ? colors.surfacePrimaryExtra : colors.textIconDefault,
         ),
         shape: BoxShape.circle,
       ),
@@ -74,7 +73,7 @@ class AppRadio<T> extends StatelessWidget {
     );
   }
 
-  double get _size {
+  double _getSize(RadioSize size) {
     return switch (size) {
       RadioSize.large => 20,
       RadioSize.small => 18,
