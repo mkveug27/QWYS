@@ -14,6 +14,15 @@
 | Slang | Локализация |
 | Talker | Логирование |
 
+## Внешние сервисы
+
+Для получения квизов приложение использует открытый API [QuizAPI](https://quizapi.io/).
+
+- **Документация:** https://quizapi.io/docs
+- **API Base URL:** https://quizapi.io/api/v1
+
+Для работы с API необходим персональный API-ключ, который можно получить после регистрации на [QuizAPI](https://quizapi.io/).
+
 ## Запуск проекта
 
 **Требования:**
@@ -32,10 +41,15 @@ flutter pub get
 Создать `.env` на основе `.env.example` и указать необходимые параметры API:
 
 ```env
-BASE_URL_DEV = 
-BASE_URL_PROD = 
-API_KEY = 
+BASE_URL_DEV = "https://quizapi.io/api/v1"
+BASE_URL_PROD = "https://quizapi.io/api/v1"
+
+API_KEY = "your_api_key"
 ```
+
+Оба окружения используют один и тот же внешний API. Разделение на DEV и PROD предусмотрено для конфигурации приложения.
+
+API-ключ необходимо получить самостоятельно на сайте QuizAPI.
 
 Дополнительные инструкции по настройке проекта, генерации файлов и сборке доступны в [документации для разработчиков](docs/DEVELOPMENT.md).
 
